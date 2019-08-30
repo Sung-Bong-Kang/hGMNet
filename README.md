@@ -5,9 +5,8 @@
  
  Therefore, we have created a tool to discover new host genetics and microbe interaction networks using microbiome PheWAS.
  
-![image](https://user-images.githubusercontent.com/51352117/64014502-3b5f2900-cb5d-11e9-9ad0-e333ade4e442.png)
+![image](https://user-images.githubusercontent.com/51352117/64018100-6c902700-cb66-11e9-8d2f-c99823794e8e.png)
 
- Gene mode is not available 
  
 ## Required Libraries and Tools
 
