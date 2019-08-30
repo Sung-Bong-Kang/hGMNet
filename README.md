@@ -33,9 +33,21 @@
 
 # How to use
 
-### Analysis Mode 1 : make PheWAS figures, no covariate , analysis Class Family
-  `/downloaded/hGMNet/Path/hGMNet.sh --OTU_ID your_OTU.txt --Bacterial_class F --OTU_DIR /data/rowi007/SCRIPT/PHEWAS/EXAMPLE --Input_prefix plink_file_id --DIR /your/plink/.bed.bim.fam/path --Analysis Linear --P_cut 5e-6 --P_count 10 --PHEWAS_image_mode Y`
+### Analysis Mode 1 : make PheWAS figures, no covariate , analysis bacterial-Class:Family
+  `/downloaded/hGMNet/Path/hGMNet.sh --OTU_ID your_OTU.txt --Bacterial_class F --OTU_DIR /your/OTU/path --Input_prefix plink_file_id --DIR /your/plink/.bed.bim.fam/path --Analysis Linear --P_cut 5e-6 --P_count 10 --PHEWAS_image_mode Y`
         
-### Analysis Mode 2 : non make PheWAS figures, 
+### Analysis Mode 2 : non make PheWAS figures, Covariate, analysis bacterial-Class:Species
 
+/data/rowi007/SCRIPT/PHEWAS/PHEWAS_BackBone2.sh \
+        --OTU_ID NEW_OTU370CD_1462HC_cluster_7_level_noY.txt \
+        --Bacterial_class F \
+        --OTU_DIR /data/rowi007/SCRIPT/PHEWAS/EXAMPLE/COV_TEST \
+        --Input_prefix KB \
+        --DIR /data/rowi007/SCRIPT/PHEWAS/EXAMPLE/COV_TEST \
+        --Analysis Linear \
+        --P_cut 5e-6 \
+        --P_count 4 \
+        --Gene_mode N \
+        --Cov /data/rowi007/SCRIPT/PHEWAS/EXAMPLE/COV_TEST/covariate.txt \
+        --Cov_names dig_sool_days,sex,digonosis_age
 ### Analysis Mode 3 : Non-negative matrix factorization(NMF) analysis 
