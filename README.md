@@ -10,5 +10,5 @@ hGMNet : host Genetics and Microbe interaction Networks
 
 
 # Required Libraries and Tools
-Python 2.7 version https://www.python.org/download/releases/2.7/
+Python 2.7 version https://www.python.org/download/releases/2.7
 Plink 1.9 version for genotype analysis https://www.cog-genomics.org/plink2
