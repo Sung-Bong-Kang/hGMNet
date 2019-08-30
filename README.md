@@ -34,7 +34,7 @@
 # How to use
 
 ### Analysis Mode 1 : make PheWAS figures, no covariate , analysis Class Family
-  /downloaded/hGMNet/Path/hGMNet.sh \
+  `/downloaded/hGMNet/Path/hGMNet.sh \
         --OTU_ID your_OTU.txt \
         --Bacterial_class F \
         --OTU_DIR /data/rowi007/SCRIPT/PHEWAS/EXAMPLE \
@@ -44,7 +44,7 @@
         --P_cut 5e-6 \
         --P_count 10 \
         --Gene_mode N \
-        --PHEWAS_image_mode Y
+        --PHEWAS_image_mode Y`
         
 ### Analysis Mode 2 : non make PheWAS figures, 
 
