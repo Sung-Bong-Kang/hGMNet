@@ -1,4 +1,4 @@
-# Automatic pipeline of microbiome PheWAS for the discovery of host-microbe interaction networks -BETA Versions
+# Automatic pipeline of microbiome PheWAS for the discovery of host-microbe interaction networks --BETA Versions
 ## hGMNet : host Genetics and Microbe interaction Networks 
  
  The assay, which proceeds to measure changes in microbe abundance according to a single genotype, does not take into account the interactions of bacteria and genetics.
@@ -36,12 +36,30 @@
 `db19_20k.gz` for Gene mode from  https://drive.google.com/open?id=1hEUdViceUQIO-_-zSShxUqW6W4qashXu
 
 ### How to use ?
-옵션설명
+#### options dicription 
+##### Require Options
+ `--DIR`             : path of your Plink file format data 
+ 
+ `--Input_prefix`    : Plink files(.bed,.bim,.fam) ID
+ 
+ `--OTU_ID`          : File ID of OTU file format       
+ 
+ `--Bacterial_class` : Choose bacterial taxonomic level such as Species(S),Genus(G),Family(F),Order(O),Class(C),Pylumn(P)
+ 
+ `--Analysis`        : Choose Analysis Mode such as Linear, NMF, Logistic(not yet avalible) 
+                       see http://zzz.bwh.harvard.edu/plink/anal.shtml 
+                       
+ `--P_cut`           : Cut off of Single SNP P-value base on linear Quantitative Trait Loci Wald Test.
+                       see http://zzz.bwh.harvard.edu/plink/anal.shtml .qassoc
+                       
+ `--P_count`         : Set the number of bacteria that exceed significance P. This is to find SNPs that control several bacteria.
+ `--PHEWAS_image_mode`
 
-#### Analysis Mode 1 : make PheWAS figures, no covariate , analysis bacterial-Class:Family
+### Analysis Examples
+#### Analysis example 1 : make PheWAS figures, no covariate , analysis bacterial-Class:Family
 /downloaded/hGMNet/Path/hGMNet.sh \
     --OTU_ID your_OTU.txt \
-    --Bacterial_class F # choise S,G,F,O,C,P,K \
+    --Bacterial_class F \
     --OTU_DIR /your/OTU/path \
     --Input_prefix plink_file_id \
     --DIR /your/plink/.bed.bim.fam/path \
@@ -50,7 +68,7 @@
     --P_count 10 \
     --PHEWAS_image_mode Y
         
-#### Analysis Mode 2 : non make PheWAS figures, Covariate, analysis bacterial-Class:Species
+#### Analysis example 2 : non make PheWAS figures, Covariate, analysis bacterial-Class:Species
 /downloaded/hGMNet/Path/hGMNet.sh \
     --OTU_ID your_OTU.txt \ 
     --Bacterial_class S \
@@ -63,7 +81,7 @@
     --Cov /covariate/path/covariate.txt \
     --Cov_names age,sex,bmi,.etc
     
-#### Analysis Mode 3 : Non-negative matrix factorization(NMF) analysis , non PheWAS immage 
+#### Analysis example 3 : Non-negative matrix factorization(NMF) analysis , non PheWAS image 
 /downloaded/hGMNet/Path/hGMNet.sh \
     --OTU_ID your_OTU.txt \
     --Bacterial_class F # choise S,G,F,O,C,P,K \
@@ -83,6 +101,7 @@
 ![ALL_chr resultsfor_network csv_snp_bacteria_network](https://user-images.githubusercontent.com/51352117/64018795-5aaf8380-cb68-11e9-984e-d138e42b7ca3.png)
 
 ![image](https://user-images.githubusercontent.com/51352117/64018954-d3aedb00-cb68-11e9-9506-c16b18a1b5de.png)
+[fig1. microbiome PheWAS image mode result]
 
 ## Reference 
  [1]
