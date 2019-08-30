@@ -6,11 +6,11 @@
 
  Gene mode is not available 
  
-# Required Libraries and Tools
+## Required Libraries and Tools
 
 `Python 2.7` version from https://www.python.org/download/releases/2.7
 
-###python libraries : 
+### python libraries : 
 
  `matplotlib`  :  `pip install matplotlib`
  
@@ -31,7 +31,7 @@
 
 `R` version 3.4 or higher 
 
-# How to use ?
+## How to use ?
 
 ### Analysis Mode 1 : make PheWAS figures, no covariate , analysis bacterial-Class:Family
   /downloaded/hGMNet/Path/hGMNet.sh \
@@ -72,6 +72,6 @@
     
     
     
-# Reference 
+## Reference 
  
 
