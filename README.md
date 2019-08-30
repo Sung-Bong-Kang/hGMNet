@@ -1,7 +1,9 @@
 # Automatic pipeline of microbiome PheWAS for the discovery of host-microbe interaction networks -BETA Versions
 ## hGMNet : host Genetics and Microbe interaction Networks 
  
- 연구에대한 개괄적 내용
+ The assay, which proceeds to measure changes in microbe abundance according to a single genotype, does not take into account the interactions of bacteria and genetics.
+ 
+ Therefore, we have created a tool to discover new host genetics and microbe interaction networks using microbiome PheWAS.
  
 ![image](https://user-images.githubusercontent.com/51352117/64014502-3b5f2900-cb5d-11e9-9ad0-e333ade4e442.png)
 
@@ -32,7 +34,8 @@
 
 `R` version 3.4 or higher 
 
-db19_20k.gz for Gene mode from  
+`db19_20k.gz` for Gene mode from  https://drive.google.com/open?id=1hEUdViceUQIO-_-zSShxUqW6W4qashXu
+
 ### How to use ?
 옵션설명
 
@@ -78,5 +81,5 @@ db19_20k.gz for Gene mode from
 
     
 ## Reference 
- 
+ [1]
 
