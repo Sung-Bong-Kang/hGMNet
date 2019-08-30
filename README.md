@@ -96,7 +96,7 @@
 #### Analysis example 3 : Non-negative matrix factorization(NMF) analysis , non PheWAS image 
 /downloaded/hGMNet/Path/hGMNet.sh \
     --OTU_ID your_OTU.txt \
-    --Bacterial_class F # choise S,G,F,O,C,P,K \
+    --Bacterial_class F \
     --OTU_DIR /your/OTU/path \
     --Input_prefix plink_file_id \
     --DIR /your/plink/.bed.bim.fam/path \
@@ -109,7 +109,7 @@
 ### Example run     
 
 
-#### --Results
+#### --Results figure
 ![ALL_chr resultsfor_network csv_snp_bacteria_network](https://user-images.githubusercontent.com/51352117/64018795-5aaf8380-cb68-11e9-984e-d138e42b7ca3.png)
 
 ![image](https://user-images.githubusercontent.com/51352117/64018954-d3aedb00-cb68-11e9-9506-c16b18a1b5de.png)
