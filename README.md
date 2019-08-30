@@ -1,7 +1,7 @@
 # hGMNet
 hGMNet : host Genetics and Microbe interaction Networks 
  
-#Automatic pipeline of microbiome PheWAS for the discovery of host-microbe interaction networks
+# Automatic pipeline of microbiome PheWAS for the discovery of host-microbe interaction networks
  
  Gene mode is not available 
  
