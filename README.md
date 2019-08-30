@@ -36,7 +36,7 @@
 ### Analysis Mode 1 : make PheWAS figures, no covariate , analysis bacterial-Class:Family
   /downloaded/hGMNet/Path/hGMNet.sh \
     --OTU_ID your_OTU.txt \
-    --Bacterial_class F ## choise S,G,F,O,C,P,K \
+    --Bacterial_class F # choise S,G,F,O,C,P,K \
     --OTU_DIR /your/OTU/path \
     --Input_prefix plink_file_id \
     --DIR /your/plink/.bed.bim.fam/path \
@@ -58,4 +58,16 @@
     --P_count 4 \
     --Cov /covariate/path/covariate.txt \
     --Cov_names age,sex,bmi,.etc
-### Analysis Mode 3 : Non-negative matrix factorization(NMF) analysis 
+### Analysis Mode 3 : Non-negative matrix factorization(NMF) analysis , non PheWAS immage 
+  /downloaded/hGMNet/Path/hGMNet.sh \
+    --OTU_ID your_OTU.txt \
+    --Bacterial_class F # choise S,G,F,O,C,P,K \
+    --OTU_DIR /your/OTU/path \
+    --Input_prefix plink_file_id \
+    --DIR /your/plink/.bed.bim.fam/path \
+    --Analysis NMF \
+    --NMF_K 8 \
+    --P_cut 5e-6 \
+    --P_count 10 \
+ 
+
