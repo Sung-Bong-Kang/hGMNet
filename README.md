@@ -1,4 +1,4 @@
-# Automatic pipeline of microbiome PheWAS for the discovery of host-microbe interaction networks
+# Automatic pipeline of microbiome PheWAS for the discovery of host-microbe interaction networks -Beta
 ## hGMNet : host Genetics and Microbe interaction Networks 
   
  
@@ -68,6 +68,8 @@
     --Analysis NMF \
     --NMF_K 8 \
     --P_cut 5e-6 \
-    --P_count 10 \
+    --P_count 10 
+    
+    
  
 
