@@ -2,14 +2,12 @@
 ## hGMNet
 ### hGMNet : host Genetics and Microbe interaction Networks 
  
-
- 
- Gene mode is not available 
  
  
 ![image](https://user-images.githubusercontent.com/51352117/64011740-48791980-cb57-11e9-948e-c08a5d87487b.png)
 
-
+ Gene mode is not available 
+ 
 # Required Libraries and Tools
 
 `Python 2.7` version from https://www.python.org/download/releases/2.7
@@ -34,3 +32,7 @@
 
 
 `R` version 3.4 or higher 
+
+# How to use
+
+## Analysis Mode 1 : make PheWAS figures, 
