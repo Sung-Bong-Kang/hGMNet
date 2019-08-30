@@ -79,6 +79,9 @@
     
 ### Example run     
 
+
+#### Results
+![ALL_chr resultsfor_network csv_snp_bacteria_network](https://user-images.githubusercontent.com/51352117/64018795-5aaf8380-cb68-11e9-984e-d138e42b7ca3.png)
     
 ## Reference 
  [1]
