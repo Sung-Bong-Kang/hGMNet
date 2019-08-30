@@ -122,3 +122,5 @@
  
  [3] Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MAR, Bender D, Maller J, Sklar P, de Bakker PIW, Daly MJ & Sham PC (2007) 
       PLINK: a toolset for whole-genome association and population-based linkage analysis. American Journal of Human Genetics, 81.
+  
+ [4] Fevotte, C., & Idier, J. (2011). Algorithms for nonnegative matrix factorization with the beta-divergence. Neural Computation, 23(9).
