@@ -1,4 +1,4 @@
-# Automatic pipeline of microbiome PheWAS for the discovery of host-microbe interaction networks -Beta
+# Automatic pipeline of microbiome PheWAS for the discovery of host-microbe interaction networks -BETA Versions
 ## hGMNet : host Genetics and Microbe interaction Networks 
   
  
