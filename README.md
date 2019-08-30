@@ -72,7 +72,9 @@
     --P_cut 5e-6 \
     --P_count 10 
     
-###     
+    
+### Example run     
+
     
 ## Reference 
  
