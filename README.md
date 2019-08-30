@@ -43,7 +43,7 @@
  
  `--Bacterial_class`  : Choose bacterial taxonomic level such as Species(S),Genus(G),Family(F),Order(O),Class(C),Pylumn(P)
  
- `--Analysis`         : Choose Analysis Mode such as Linear, NMF, (Logistic is not yet available) \
+ `--Analysis`         : Choose Analysis Mode such as Linear, NMF(non-negative matrix factorization), (Logistic is not yet available) \
                        see http://zzz.bwh.harvard.edu/plink/anal.shtml 
                        
  `--P_cut`            : Cut off of Single SNP P-value base on linear Quantitative Trait Loci Wald Test.\
