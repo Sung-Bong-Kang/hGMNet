@@ -1,7 +1,7 @@
 # Automatic pipeline of microbiome PheWAS for the discovery of host-microbe interaction networks -BETA Versions
 ## hGMNet : host Genetics and Microbe interaction Networks 
  
- 연구에대한 개괄적 
+ 연구에대한 개괄적 내용
  
 ![image](https://user-images.githubusercontent.com/51352117/64014502-3b5f2900-cb5d-11e9-9ad0-e333ade4e442.png)
 
@@ -32,11 +32,12 @@
 
 `R` version 3.4 or higher 
 
+db19_20k.gz for Gene mode from  
 ### How to use ?
 옵션설명
 
 #### Analysis Mode 1 : make PheWAS figures, no covariate , analysis bacterial-Class:Family
-  /downloaded/hGMNet/Path/hGMNet.sh \
+/downloaded/hGMNet/Path/hGMNet.sh \
     --OTU_ID your_OTU.txt \
     --Bacterial_class F # choise S,G,F,O,C,P,K \
     --OTU_DIR /your/OTU/path \
@@ -48,7 +49,6 @@
     --PHEWAS_image_mode Y
         
 #### Analysis Mode 2 : non make PheWAS figures, Covariate, analysis bacterial-Class:Species
-
 /downloaded/hGMNet/Path/hGMNet.sh \
     --OTU_ID your_OTU.txt \ 
     --Bacterial_class S \
@@ -60,8 +60,9 @@
     --P_count 4 \
     --Cov /covariate/path/covariate.txt \
     --Cov_names age,sex,bmi,.etc
+    
 #### Analysis Mode 3 : Non-negative matrix factorization(NMF) analysis , non PheWAS immage 
-  /downloaded/hGMNet/Path/hGMNet.sh \
+/downloaded/hGMNet/Path/hGMNet.sh \
     --OTU_ID your_OTU.txt \
     --Bacterial_class F # choise S,G,F,O,C,P,K \
     --OTU_DIR /your/OTU/path \
