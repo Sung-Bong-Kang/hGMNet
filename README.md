@@ -34,28 +34,28 @@
 # How to use
 
 ### Analysis Mode 1 : make PheWAS figures, no covariate , analysis bacterial-Class:Family
-  /downloaded/hGMNet/Path/hGMNet.sh "\"
-    --OTU_ID your_OTU.txt "\" 
-    --Bacterial_class F "\" ## choise S,G,F,O,C,P,K
-    --OTU_DIR /your/OTU/path "\"
-    --Input_prefix plink_file_id "\"
-    --DIR /your/plink/.bed.bim.fam/path "\"
-    --Analysis Linear "\"
-    --P_cut 5e-6 "\"
-    --P_count 10 "\"
+  /downloaded/hGMNet/Path/hGMNet.sh \
+    --OTU_ID your_OTU.txt \
+    --Bacterial_class F ## choise S,G,F,O,C,P,K \
+    --OTU_DIR /your/OTU/path \
+    --Input_prefix plink_file_id \
+    --DIR /your/plink/.bed.bim.fam/path \
+    --Analysis Linear \
+    --P_cut 5e-6 \
+    --P_count 10 \
     --PHEWAS_image_mode Y
         
 ### Analysis Mode 2 : non make PheWAS figures, Covariate, analysis bacterial-Class:Species
 
-/downloaded/hGMNet/Path/hGMNet.sh "\"
-    --OTU_ID your_OTU.txt "\" 
-    --Bacterial_class S "\"
-    --OTU_DIR /your/OTU/path "\"
-    --Input_prefix plink_file_id "\"
-    --DIR /your/plink/.bed.bim.fam/path "\"
-    --Analysis Linear "\"
-    --P_cut 5e-6 "\"
-    --P_count 4 "\"
-    --Cov /covariate/path/covariate.txt "\"
+/downloaded/hGMNet/Path/hGMNet.sh \
+    --OTU_ID your_OTU.txt \ 
+    --Bacterial_class S \
+    --OTU_DIR /your/OTU/path \
+    --Input_prefix plink_file_id \
+    --DIR /your/plink/.bed.bim.fam/path \
+    --Analysis Linear \
+    --P_cut 5e-6 \
+    --P_count 4 \
+    --Cov /covariate/path/covariate.txt \
     --Cov_names age,sex,bmi,.etc
 ### Analysis Mode 3 : Non-negative matrix factorization(NMF) analysis 
