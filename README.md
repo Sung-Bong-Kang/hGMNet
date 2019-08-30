@@ -31,7 +31,7 @@
 
 `R` version 3.4 or higher 
 
-# How to use
+# How to use ?
 
 ### Analysis Mode 1 : make PheWAS figures, no covariate , analysis bacterial-Class:Family
   /downloaded/hGMNet/Path/hGMNet.sh \
@@ -71,5 +71,7 @@
     --P_count 10 
     
     
+    
+# Reference 
  
 
