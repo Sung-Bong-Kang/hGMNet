@@ -14,19 +14,19 @@
 
  `matplotlib`  :  `pip install matplotlib`
  
- `math`
- 
- `pandas 0.23.4`  :  `pip install pandas` 
- 
- `numpy 1.15.4`  :  `pip install numpy`
- 
- `seaborn 0.9.0` :  `pip install seaborn`
- 
- `networkx 2.2`  :  `pip install networkx`
- 
- `sklearn` from  
 
-`Plink 1.9` version for genotype analysis from `https://www.cog-genomics.org/plink2`
+ 
+ `pandas 0.23.4`  : pip install pandas
+ 
+ `numpy 1.15.4`  :  pip install numpy
+ 
+ `seaborn 0.9.0` :  pip install seaborn
+ 
+ `networkx 2.2`  :  pip install networkx
+ 
+ `sklearn` , `math`
+
+`Plink 1.9` version for genotype analysis from https://www.cog-genomics.org/plink2
 
 
 `R` version 3.4 or higher 
