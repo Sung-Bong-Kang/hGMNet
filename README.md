@@ -38,22 +38,23 @@
 ### How to use ?
 #### options dicription 
 ##### Require Options
- `--DIR`             : path of your Plink file format data 
+ `--DIR`              : path of your Plink file format data 
  
- `--Input_prefix`    : Plink files(.bed,.bim,.fam) ID
+ `--Input_prefix`     : Plink files(.bed,.bim,.fam) ID
  
- `--OTU_ID`          : File ID of OTU file format       
+ `--OTU_ID`           : File ID of OTU file format       
  
- `--Bacterial_class` : Choose bacterial taxonomic level such as Species(S),Genus(G),Family(F),Order(O),Class(C),Pylumn(P)
+ `--Bacterial_class`  : Choose bacterial taxonomic level such as Species(S),Genus(G),Family(F),Order(O),Class(C),Pylumn(P)
  
- `--Analysis`        : Choose Analysis Mode such as Linear, NMF, Logistic(not yet avalible) 
+ `--Analysis`         : Choose Analysis Mode such as Linear, NMF, Logistic(not yet avalible) \
                        see http://zzz.bwh.harvard.edu/plink/anal.shtml 
                        
- `--P_cut`           : Cut off of Single SNP P-value base on linear Quantitative Trait Loci Wald Test.
+ `--P_cut`            : Cut off of Single SNP P-value base on linear Quantitative Trait Loci Wald Test.\
                        see http://zzz.bwh.harvard.edu/plink/anal.shtml .qassoc
                        
- `--P_count`         : Set the number of bacteria that exceed significance P. This is to find SNPs that control several bacteria.
- `--PHEWAS_image_mode`
+ `--P_count`          : Set the number of bacteria that exceed significance P. This is to find SNPs that control several bacteria.
+ 
+ `--PHEWAS_image_mode`: PheWAS results make image like fig.1  `Y or YES make image default None`
 
 ### Analysis Examples
 #### Analysis example 1 : make PheWAS figures, no covariate , analysis bacterial-Class:Family
@@ -101,7 +102,7 @@
 ![ALL_chr resultsfor_network csv_snp_bacteria_network](https://user-images.githubusercontent.com/51352117/64018795-5aaf8380-cb68-11e9-984e-d138e42b7ca3.png)
 
 ![image](https://user-images.githubusercontent.com/51352117/64018954-d3aedb00-cb68-11e9-9506-c16b18a1b5de.png)
-[fig1. microbiome PheWAS image mode result]
+[fig.1 microbiome PheWAS image mode result]
 
 ## Reference 
  [1]
