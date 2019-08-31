@@ -84,7 +84,7 @@
         
 #### Analysis example 2 : non make PheWAS figures, Covariate, analysis bacterial-Class:Species
 /downloaded/hGMNet/Path/hGMNet.sh \
-    --OTU_ID your_OTU.txt \ 
+    --OTU_ID your_OTU.txt \
     --Bacterial_class S \
     --OTU_DIR /your/OTU/path \
     --Input_prefix plink_file_id \
