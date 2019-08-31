@@ -9,11 +9,11 @@
 ![image](https://user-images.githubusercontent.com/51352117/64018100-6c902700-cb66-11e9-8d2f-c99823794e8e.png)
 
  
-## Required Libraries and Tools
+## 1.Required Libraries and Tools
 
 `Python 2.7` version from https://www.python.org/download/releases/2.7
 
-### python libraries : 
+### 1.1.python libraries : 
 
  `matplotlib`  :  `pip install matplotlib`
  
@@ -27,15 +27,17 @@
  
  `sklearn` , `math`
 
+### 1.2.analysis tools :
+
 `Plink 1.9` version for genotype analysis from https://www.cog-genomics.org/plink2
 
 `R` version 3.4 or higher 
 
 `db19_20k.gz` for Gene mode from  https://drive.google.com/open?id=1hEUdViceUQIO-_-zSShxUqW6W4qashXu
 
-### How to use ?
-#### options dicription 
-##### Require Options
+## 2.How to use ?
+### 2.1.options dicription 
+##### 2.1.1.Require Options
  `--DIR`              : path of your Plink file format data 
  
  `--Input_prefix`     : Plink files(.bed,.bim,.fam) ID
@@ -52,7 +54,7 @@
                        
  `--P_count`          : Set the number of bacteria that exceed significance P. This is to find SNPs that control several bacteria.
  
- #### Selective Options
+ #### 2.1.2.Selective Options
  
  `--PHEWAS_image_mode`: PheWAS results make image like fig.1     `Choose Y or YES make image default None`
  
@@ -69,8 +71,8 @@
  
  `--Corr_cut`         : Set correlation coefficient cutoff  *not yet available option
 
-### Analysis Examples
-#### Analysis example 1 : make PheWAS figures, no covariate , analysis bacterial-Class:Family
+### 2.2.Analysis Examples
+#### 2.2.1.Analysis example 1 : make PheWAS figures, no covariate , analysis bacterial-Class:Family
 /downloaded/hGMNet/Path/hGMNet.sh \
     --OTU_ID your_OTU.txt \
     --Bacterial_class F \
@@ -82,7 +84,7 @@
     --P_count 10 \
     --PHEWAS_image_mode Y
         
-#### Analysis example 2 : non make PheWAS figures, Covariate, analysis bacterial-Class:Species
+#### 2.2.2.Analysis example 2 : non make PheWAS figures, Covariate, analysis bacterial-Class:Species
 /downloaded/hGMNet/Path/hGMNet.sh \
     --OTU_ID your_OTU.txt \
     --Bacterial_class S \
@@ -95,7 +97,7 @@
     --Cov /covariate/path/covariate.txt \
     --Cov_names age,sex,bmi,.etc
     
-#### Analysis example 3 : Non-negative matrix factorization(NMF) analysis , non PheWAS image 
+#### 2.2.3.Analysis example 3 : Non-negative matrix factorization(NMF) analysis , non PheWAS image 
 /downloaded/hGMNet/Path/hGMNet.sh \
     --OTU_ID your_OTU.txt \
     --Bacterial_class F \
@@ -108,10 +110,10 @@
     --P_count 10 
     
     
-### Example run     
+## 3.Example run     
 
 
-#### --Results figure
+#### Results figure
 
 ![image](https://user-images.githubusercontent.com/51352117/64018954-d3aedb00-cb68-11e9-9506-c16b18a1b5de.png)
 [fig.1 microbiome PheWAS image mode result]
@@ -119,7 +121,7 @@
 ![ALL_chr resultsfor_network csv_snp_bacteria_network](https://user-images.githubusercontent.com/51352117/64018795-5aaf8380-cb68-11e9-984e-d138e42b7ca3.png)
 [fig.2 Bacteria and host Genotype interaction network
 
-## Reference 
+## 4.Reference 
  [1]
  
  [2]  Cronin, Robert M.; Field, Julie R.; Bradford, Yuki; Shaffer, Christian M.; Carroll, Robert J.; Mosley, Jonathan D.; Bastarache,         Lisa; Edwards, Todd L.; Hebbring, Scott J. (2014). "Phenome-wide association studies demonstrating pleiotropy of genetic variants       within FTO with and without adjustment for body mass index". Frontiers in Genetics. 5: 250. doi:10.3389/fgene.2014.00250. ISSN           1664-8021. PMC 4134007. PMID 25177340.
