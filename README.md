@@ -110,7 +110,7 @@
     --P_count 10 
     
     
-## 3.Dwonload and Example run    
+## 3.Download and Example run    
 #### ./ is dowonloaded directory 
 
 ##### Program Download :
