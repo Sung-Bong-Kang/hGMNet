@@ -113,11 +113,11 @@
 ## 3.Dwonload and Example run    
 #### ./ is dowonloaded directory 
 
-##### program Download :
+##### Program Download :
 
 `git clone https://github.com/Sung-Bong-Kang/hGMNet.git`
 
-##### initial Setup : 
+##### Initial Setup : 
 
 `bash ./Setup.sh`
 
