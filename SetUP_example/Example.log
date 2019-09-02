@@ -1,26 +1,28 @@
 PLINK v1.90b6.4 64-bit (7 Aug 2018)
 Options in effect:
-  --bfile ../EXAMPLE/Family_TEST/Example
-  --extract ../EXAMPLE/Family_TEST/SIG_SNP
+  --bfile Example
+  --extract SN
   --make-bed
   --out Example
 
-Hostname: plant-PowerEdge-R520
-Working directory: /data/rowi007/SCRIPT/PHEWAS/SetUP_example
-Start time: Mon Sep  2 13:41:00 2019
+Hostname: somatic
+Working directory: /data/rowi007/tools/hGMNet/SetUP_example
+Start time: Mon Sep  2 16:31:14 2019
 
-Random number seed: 1567399260
-193404 MB RAM detected; reserving 96702 MB for main workspace.
-549888 variants loaded from .bim file.
+Random number seed: 1567409474
+161153 MB RAM detected; reserving 80576 MB for main workspace.
+Warning: --make-bed input and output filenames match.  Appending '~' to input
+filenames.
+91 variants loaded from .bim file.
 50 people (0 males, 28 females, 22 ambiguous) loaded from .fam.
 Ambiguous sex IDs written to Example.nosex .
---extract: 91 variants remaining.
+--extract: 20 variants remaining.
 Using 1 thread (no multithreaded calculations invoked).
 Before main variant filters, 50 founders and 0 nonfounders present.
 Calculating allele frequencies... done.
-Total genotyping rate is 0.991209.
-91 variants and 50 people pass filters and QC.
+Total genotyping rate is 0.984.
+20 variants and 50 people pass filters and QC.
 Note: No phenotypes present.
 --make-bed to Example.bed + Example.bim + Example.fam ... done.
 
-End time: Mon Sep  2 13:41:01 2019
+End time: Mon Sep  2 16:31:14 2019
