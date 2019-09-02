@@ -111,7 +111,7 @@
     
     
 ## 3.Example run     
-
+./SetUP_example/Example_run.sh
 
 #### Results figure
 
