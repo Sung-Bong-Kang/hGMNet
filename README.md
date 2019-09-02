@@ -110,8 +110,20 @@
     --P_count 10 
     
     
-## 3.Example run     
-./SetUP_example/Example_run.sh
+## 3.Dwonload and Example run    
+#### ./ is dowonloaded directory 
+
+##### program Download :
+
+`git clone https://github.com/Sung-Bong-Kang/hGMNet.git`
+
+##### initial Setup : 
+
+`bash ./Setup.sh`
+
+##### Example run :
+
+`./SetUP_example/Example_run.sh`  
 
 #### Results figure
 
