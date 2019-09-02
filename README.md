@@ -31,6 +31,10 @@
 
 `Plink 1.9` version for genotype analysis from https://www.cog-genomics.org/plink2
 
+If you downloaded plink, you would enter the following code:
+
+`sudo ln -s /absolute/Path/of/plink /usr/local/bin/plink`
+
 `R` version 3.4 or higher 
 
 `db19_20k.gz` for Gene mode from  https://drive.google.com/open?id=1hEUdViceUQIO-_-zSShxUqW6W4qashXu
