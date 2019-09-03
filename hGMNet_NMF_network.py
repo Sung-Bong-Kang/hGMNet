@@ -37,7 +37,7 @@ plt.savefig('%s.SNP_SNP_correaltion_map.png'%sys.argv[1],dpi = 300,bbox_inches =
 plt.close()
 links = corr.stack().reset_index()
 links.columns = ['var1', 'var2','value']
-links_filtered=links.loc[ (links['value'] > np.percentile(links['value'],75)) & (links['var1'] != links['var2']) ]
+links_filtered=links.loc[ (links['value'] > 0.8) & (links['var1'] != links['var2']) ]
 G=nx.from_pandas_edgelist(links_filtered, 'var1', 'var2')
 plt.figure(figsize=(12,12))
 nx.draw(G, with_labels=True, node_color='orange', node_size=400 ,edge_color='black', linewidths=1, font_size=12)
@@ -83,11 +83,11 @@ for i in np.array(df) :
     snp_cnt = 0
     for j in i :
         EDGE=[BETA_col[snp_cnt],BETA_IDX[bacterial_cnt],j]
-        if j > np.percentile(df[list(df.columns)[snp_cnt]].abs(),95) and BETA_col[snp_cnt]in G.nodes :
+        if j > np.percentile(df[list(df.columns)[snp_cnt]].abs(),90) and BETA_col[snp_cnt]in G.nodes :
             positive_edge.append(EDGE)
             NODES.append(BETA_IDX[bacterial_cnt])
             
-        elif  j< -np.percentile(df[list(df.columns)[snp_cnt]].abs(),95) and BETA_col[snp_cnt] in G.nodes :
+        elif  j< -np.percentile(df[list(df.columns)[snp_cnt]].abs(),90) and BETA_col[snp_cnt] in G.nodes :
             negative_edge.append(EDGE)
             NODES.append(BETA_IDX[bacterial_cnt])
         snp_cnt =snp_cnt +1
@@ -109,9 +109,9 @@ ax = plt.subplot(1, 1, 1)
 fig.set_size_inches(20,15)
 nx.draw_networkx_nodes(G2,pos,nodelist=list(df.index),node_color='c')
 nx.draw_networkx_nodes(G2,pos,nodelist=list(G.nodes),node_color='orange')
+nx.draw_networkx_edges(G2,pos,edgelist=list(G.edges)+list(W_m.edges))
 nx.draw_networkx_edges(G2,pos,edgelist=positive_edge,edge_color='b',width=[1,3,5],alpha=0.4)
 nx.draw_networkx_edges(G2,pos,edgelist=negative_edge,edge_color='r',width=[1,3,5],alpha=0.4)
-nx.draw_networkx_edges(G2,pos,edgelist=list(G.edges)+list(W_m.edges))
 nx.draw_networkx_labels(G2, pos,labels=labels,font_size=17,)
 plt.title('SNP and NMF cluster Network',fontsize= 20)
 if len(list(G2.edges)+list(G.edges)) != 0 and len(positive_edge) == 0:
