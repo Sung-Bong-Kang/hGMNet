@@ -6,7 +6,7 @@
  
  Therefore, we have created a tool to discover new host genetics and microbe interaction networks using microbiome PheWAS.
  
-![image](https://user-images.githubusercontent.com/51352117/64018100-6c902700-cb66-11e9-8d2f-c99823794e8e.png)
+![image](https://user-images.githubusercontent.com/51352117/66802394-3b718780-ef57-11e9-89a3-1dcd21eb11f6.png)
 
  
 ## 1.Required Libraries and Tools
