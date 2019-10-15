@@ -1,5 +1,6 @@
 #!/bin/bash 
-if ! options=$(getopt -o h -l help,DIR:,Input_prefix:,OTU_DIR:,OTU_ID:,Bacterial_class:,P_cut:,P_count:,PHEWAS_image_mode:,Corr:,Corr_cut:,Analysis:,Beta_cut:,Gene_mode:,NMF_K:,Cov:,Cov_names: -- "$@")
+script_DIR="$( cd "$( dirname "$0" )" && pwd -P )"
+if ! options=$(getopt -o h -l help,DIR:,Input_prefix:,OTU_DIR:,OTU_ID:,Bacterial_class:,P_cut:,P_count:,PHEWAS_image_mode:,Corr:,Corr_cut:,Analysis:,Beta_cut:,Gene_mode:,NMF_K:,Cov:,Cov_names:,Norm: -- "$@")
 then
 	echo "ERROR: print usage"
 	exit 1
@@ -8,7 +9,7 @@ eval set -- "$options"
 while true; do
 	case "$1" in
 		-h|--help)
-			echo 'DDD'
+			$script_DIR/Help
 			break
 			shift ;;
 		--DIR)
@@ -78,6 +79,10 @@ while true; do
 			Cov_names="$2"
 			echo --Cov_name == $Cov_names
 		shift 2 ;;
+		--Norm)
+			Norm="$2"
+			echo --Norm == $Norm
+		shift 2 ;;
 		--)
 		shift
 		break
@@ -101,14 +106,26 @@ else
 fi
 echo $Bacterial_class $Bacteria_idx
 #######################  Script directory ######################################
-script_DIR="$( cd "$( dirname "$0" )" && pwd -P )"
-Rscript $script_DIR/Log_TSS_normalization_minmax.R $OTU_DIR/$OTU_ID $OTU_DIR/${OTU_ID%%".txt"}'.LogTSSMinMax.txt' $OTU_DIR/${OTU_ID%%".txt"}'.TSS.txt'
-python $script_DIR/otu_level_down.py $OTU_DIR/${OTU_ID%%".txt"}'.TSS.txt' $Bacterial_class
-OTU_T=$OTU_DIR/${OTU_ID%%".txt"}'.TSS_cluster_'$Bacterial_class'_level.txt'
-echo $OTU_T
-OTU_ID=${OTU_ID%%".txt"}'.LogTSSMinMax.txt'
-python $script_DIR/otu_level_down.py $OTU_DIR/$OTU_ID  $Bacterial_class 
-OTU_ID=${OTU_ID%%".txt"}'_cluster_'$Bacterial_class'_level.txt'
+if [ "$Norm" == "CSS" ];
+then
+	python $script_DIR/otu_level_down.py $OTU_DIR/$OTU_ID $Bacterial_class
+	Rscript $script_DIR/CSS_norm.R $OTU_DIR/${OTU_ID%%".txt"}"_cluster_"$Bacterial_class"_level.txt" $OTU_DIR/${OTU_ID%%".txt"}"_cluster_"$Bacterial_class"_level."CSS.txt
+	OTU_ID=${OTU_ID%%".txt"}"_cluster_"$Bacterial_class"_level."CSS.txt
+	OTU_T=$OTU_DIR/${OTU_ID%%".txt"}"_cluster_"$Bacterial_class"_level."CSS.txt
+
+	
+else
+	## Default 
+	Rscript $script_DIR/Log_TSS_normalization_minmax.R $OTU_DIR/$OTU_ID $OTU_DIR/${OTU_ID%%".txt"}'.LogTSSMinMax.txt' $OTU_DIR/${OTU_ID%%".txt"}'.TSS.txt'
+	python $script_DIR/otu_level_down.py $OTU_DIR/${OTU_ID%%".txt"}'.TSS.txt' $Bacterial_class
+	OTU_T=$OTU_DIR/${OTU_ID%%".txt"}'.TSS_cluster_'$Bacterial_class'_level.txt'
+	echo $OTU_T
+	OTU_ID=${OTU_ID%%".txt"}'.LogTSSMinMax.txt'
+	python $script_DIR/otu_level_down.py $OTU_DIR/$OTU_ID  $Bacterial_class 
+	OTU_ID=${OTU_ID%%".txt"}'_cluster_'$Bacterial_class'_level.txt'
+sed -e 's/ /_/' $OTU_DIR/$OTU_ID  >$OTU_DIR/temp
+mv $OTU_DIR/temp $OTU_DIR/$OTU_ID
+fi
 echo $OTU_ID
 if [ "$Analysis" == "NMF" ];
 then
@@ -176,7 +193,7 @@ then
 	done
 	wait
 	echo END
-elif [ "$Analysis" == 'NMF' -a "$COV" != "" ];
+elif [ "$Analysis" == 'NMF' -a "$Cov" != "" ];
 then
 	VARS=$(echo $Cov_names | sed -e 's/,/ /g')
 	for idx in {1..22};

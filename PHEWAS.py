@@ -50,11 +50,9 @@ for i in merged :
 
     Family_indx.append(BACTERIAL_ID[-2])
     if 'linear' in BACTERIAL_ID[-1] :
-        inside = BACTERIAL_ID[-1][:BACTERIAL_ID[-1].find('.assoc.linear')]
-        Family_indx.append(idx[0].split('.OTU.')[1].strip('.assoc.linear'))
+        Family_indx.append(idx[0].split('.OTU.')[1][:idx[0].split('.OTU.')[1].find('.assoc.linear')])
     else :
-        inside = BACTERIAL_ID[-1][:BACTERIAL_ID[-1].find('.qassoc')]
-        Family_indx.append(idx[0].split('.OTU.')[1].strip('.qassoc'))
+        Family_indx.append(idx[0].split('.OTU.')[1][:idx[0].split('.OTU.')[1].find('.qassoc')])
     SNP= idx[1]
     P_value= idx[3]
     Beta=idx[2]
