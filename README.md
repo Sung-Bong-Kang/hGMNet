@@ -1,5 +1,5 @@
 # Automatic pipeline of microbiome PheWAS for the discovery of host-microbe interaction networks  
-#### --BETA Versions
+
 ## hGMNet : host Genetics and Microbe interaction Networks 
  
  The assay which proceeds to measure changes in microbe abundance according to a single genotype, does not take into account the interactions of bacteria and genetics.
