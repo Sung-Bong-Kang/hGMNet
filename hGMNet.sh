@@ -110,10 +110,9 @@ if [ "$Norm" == "CSS" ];
 then
 	python $script_DIR/otu_level_down.py $OTU_DIR/$OTU_ID $Bacterial_class
 	Rscript $script_DIR/CSS_norm.R $OTU_DIR/${OTU_ID%%".txt"}"_cluster_"$Bacterial_class"_level.txt" $OTU_DIR/${OTU_ID%%".txt"}"_cluster_"$Bacterial_class"_level."CSS.txt
-	OTU_ID=${OTU_ID%%".txt"}"_cluster_"$Bacterial_class"_level."CSS.txt
 	OTU_T=$OTU_DIR/${OTU_ID%%".txt"}"_cluster_"$Bacterial_class"_level."CSS.txt
-
-	
+	OTU_ID=${OTU_ID%%".txt"}"_cluster_"$Bacterial_class"_level."CSS.txt
+		
 else
 	## Default 
 	Rscript $script_DIR/Log_TSS_normalization_minmax.R $OTU_DIR/$OTU_ID $OTU_DIR/${OTU_ID%%".txt"}'.LogTSSMinMax.txt' $OTU_DIR/${OTU_ID%%".txt"}'.TSS.txt'
