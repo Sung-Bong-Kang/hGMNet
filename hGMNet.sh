@@ -156,7 +156,8 @@ then
 	for idx in {1..22};
 	do
 		plink --bfile $DIR/$Input_prefix --chr $idx --pheno $phenos --all-pheno --allow-no-sex --assoc --out $DIR/Qassoc/chr$idx.OTU 
-		for B_idx in `ls $DIR/Qassoc |grep chr$idx.OTU.*$Bacteria_idx|grep -v $Bacteria_idx'.qassoc'`;
+		for B_idx in `ls $DIR/Qassoc |grep chr$idx.OTU.*$Bacteria_idx`; 
+		#grep -v $Bacteria_idx'.qassoc'`;
 		do
 			B_idx=${B_idx##/*/}
 			awk -v DDD=$B_idx '{print DDD"\t"$2"\t"$5"\t"$9}' $DIR/Qassoc/$B_idx|grep -v NA
@@ -184,7 +185,8 @@ then
 	for idx in {1..22};
 	do
 		plink --bfile $DIR/$Input_prefix --chr $idx --pheno $phenos --all-pheno --allow-no-sex --covar $Cov --covar-name $VARS --parameters 1 --linear --out $DIR/Qassoc/chr$idx.OTU
-		for B_idx in `ls $DIR/Qassoc |grep chr$idx.OTU.*$Bacteria_idx|grep -v $Bacteria_idx'.assoc.linear'`;
+		for B_idx in `ls $DIR/Qassoc |grep chr$idx.OTU.*$Bacteria_idx`;
+		#|grep -v $Bacteria_idx'.assoc.linear'`;
 		do
 			B_idx=${B_idx##/*/}
 			awk -v DDD=$B_idx '{print DDD"\t"$2"\t"$7"\t"$9}' $DIR/Qassoc/$B_idx|grep -v NA
@@ -223,7 +225,7 @@ else
 		rm $DIR/PHEWAS_fig/*
 	fi
 	python $script_DIR/PHEWAS.py $DIR/ALL_chr.results $P_cut $P_count $DIR 
-	mv $DIR/rs*.png $DIR/PHEWAS_fig/
+	mv $DIR/*_Pcount.png $DIR/PHEWAS_fig/
 fi
 ################################ NETWORK Analysis ############################################################ 
 echo $Gene_mode
