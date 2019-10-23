@@ -122,9 +122,10 @@ else
 	OTU_ID=${OTU_ID%%".txt"}'.LogTSSMinMax.txt'
 	python $script_DIR/otu_level_down.py $OTU_DIR/$OTU_ID  $Bacterial_class 
 	OTU_ID=${OTU_ID%%".txt"}'_cluster_'$Bacterial_class'_level.txt'
+
+fi
 sed -e 's/ /_/' $OTU_DIR/$OTU_ID  >$OTU_DIR/temp
 mv $OTU_DIR/temp $OTU_DIR/$OTU_ID
-fi
 echo $OTU_ID
 if [ "$Analysis" == "NMF" ];
 then
