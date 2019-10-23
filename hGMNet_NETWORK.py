@@ -18,18 +18,20 @@ df.index =df['Family']
 del df['Family']
 del df['Unnamed: 0']
 ###########
+TAXA = sys.argv[3]
+if TAXA =='s__' :
+    TAXA = 'g__'
+
 Family=[]
-name_family =[] 
+name_family =[]
 for i in df.index :
-    if sys.argv[3] in i :
-        if i[i.find(sys.argv[3]):] != sys.argv[3]:
+    if TAXA in i :
+        if i[i.find(TAXA):] != TAXA:
             Family.append(i)
-            if i[i.find('%s'%sys.argv[3]):] in name_family :
+            if i[i.find(TAXA):] in name_family :
                 name_family.append(i[i.find(i.split(';')[-2]):])
             else:
-                name_family.append(i[i.find('%s'%sys.argv[3]):])
-df.index = name_family
-
+                name_family.append(i[i.find(TAXA):])
 
 fig = plt.figure(figsize=(20,20))
 sns.clustermap(df,cmap='RdYlGn_r',linewidths=.7)
